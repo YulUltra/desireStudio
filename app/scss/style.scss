@@ -241,3 +241,245 @@
     max-width: 485px;
   }
 }
+
+.top {
+  &_inner {
+    padding-bottom: 70px;
+    position: relative;
+    &::after {
+      content: "";
+      background-image: url(../images/slider-bg.jpg);
+      width: 100%;
+      height: 722px;
+      top: 0;
+      z-index: -1;
+      position: absolute;
+    }
+  }
+  &_slider-item {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  &_slider-img {
+    margin-left: -14%;
+    max-width: 703px;
+    height: 815px;
+    object-fit: cover;
+  }
+  &_slider-info {
+    max-width: 645px;
+    margin-left: 25px;
+  }
+  &_slider-title {
+    @extend %title-font;
+    color: $title;
+    font-size: 110px;
+    line-height: 135px;
+    padding-bottom: 26px;
+    margin-bottom: 26px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 186px;
+      background: #6d7278;
+      bottom: 0;
+      height: 1px;
+    }
+  }
+  &_slider-text {
+    max-width: 645px;
+  }
+}
+
+.new-collection {
+  text-align: center;
+  padding: 45px 0 105px;
+  &_title {
+    @extend %title-font;
+    color: $title;
+    font-size: 35px;
+    line-height: 51px;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 250px;
+      height: 1px;
+      bottom: 0;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      background: #979797;
+    }
+  }
+  &_text {
+    max-width: 730px;
+    margin: 0 auto 30px;
+  }
+}
+
+.collection {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+  &_item {
+    position: relative;
+    &:hover {
+      .collection_info {
+        opacity: 1;
+      }
+    }
+  }
+  &_images {
+    min-height: 350px;
+    object-fit: cover;
+  }
+  &_info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(#fff, 0.7);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  &_info-title {
+    @extend %title-font;
+    font-size: 20px;
+    line-height: 25px;
+    color: $title;
+    padding-bottom: 19px;
+    margin-bottom: 19px;
+    position: relative;
+    &::after {
+      content: "";
+      bottom: 0;
+      position: absolute;
+      height: 1px;
+      background: #979797;
+      width: 80%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+  }
+  &_info-text {
+    font-weight: 600px;
+    font-size: 14px;
+    color: #707070;
+  }
+}
+
+.decor {
+  padding: 170px 0 165px;
+  background-image: url(../images/decor-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  &_title {
+    @extend %title-font;
+    color: $title;
+    font-size: 60px;
+    line-height: 80px;
+    max-width: 737px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    position: relative;
+    &::after {
+      content: "";
+      bottom: 0;
+      position: absolute;
+      height: 1px;
+      background: #6d7278;
+      width: 200px;
+      left: 0;
+      right: 0;
+    }
+  }
+  &_text {
+    max-width: 640px;
+  }
+}
+
+.works-path {
+  padding: 80px 0 30px;
+  &_title {
+    @extend %title-font;
+    text-align: center;
+    color: $title;
+    margin-bottom: 40px;
+    font-size: 36px;
+    line-height: 51px;
+  }
+  &_items-box {
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 2px solid rgba(#263838, 0.7);
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: $title;
+    }
+  }
+  &_item {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    aligh-items: center;
+    position: relative;
+    height: 100%;
+  }
+  &_item--production,
+  &_item--consultation {
+    padding-bottom: 38px;
+  }
+  &_item--production {
+    margin-left: 317px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: rgba($title, 0.7);
+      width: 2px;
+      height: 20px;
+    }
+  }
+  &_item--measurements {
+    padding-top: 38px;
+    margin-left: 305px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba($title, 0.7);
+      width: 2px;
+      height: 20px;
+    }
+  }
+  &_item-title {
+    margin-left: 13px;
+    color: $title;
+    @extend %title-font;
+  }
+  &_item-text {
+    margin-top: 13px;
+  }
+}
