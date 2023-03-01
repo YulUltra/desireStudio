@@ -37,6 +37,20 @@
     color: rgba(54, 56, 56, 0.9);
     line-height: 22px;
   }
+  &_list-link--active {
+    padding-bottom: 4px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background-color: rgba($title, 0.7);
+      border-radius: 1px;
+    }
+  }
 }
 
 .footer {
@@ -240,6 +254,28 @@
 
   &_images {
     max-width: 485px;
+  }
+}
+
+.breadcrumbs {
+  background: rgba(#dfdfdf, 0.5);
+  padding: 13px 14px;
+  &_list {
+    display: flex;
+  }
+  &_item::after {
+    content: " /";
+    margin-left: -4px;
+    margin-right: 4px;
+  }
+
+  &_item:last-child::after {
+    display: none;
+  }
+
+  &_link {
+    font-size: 14px;
+    color: $default;
   }
 }
 
@@ -562,5 +598,62 @@
     font-size: 24px;
     line-height: 38px;
     @extend %title-font;
+  }
+}
+
+.about {
+  &_prev {
+    background-image: url(../images/about-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    text-align: center;
+    padding: 160px 0;
+    margin-top: -53px;
+  }
+  &_prev-title {
+    color: $title;
+    @extend %title-font;
+    font-size: 60px;
+    line-height: 80px;
+  }
+  &_content {
+    padding: 130px 0 49px;
+  }
+
+  &_title {
+    color: $title;
+    @extend %title-font;
+    font-size: 36px;
+    line-height: 60px;
+    padding-bottom: 22px;
+    margin-bottom: 22px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 200px;
+      height: 1px;
+      background-color: #6d7278;
+      bottom: 0;
+    }
+  }
+
+  &_text {
+    padding-left: 284px;
+    p {
+      margin-bottom: 30px;
+    }
+  }
+  &_popup {
+    background-image: url(../images/popup-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    min-height: 414px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
