@@ -13,4 +13,9 @@ $(function () {
     fade: true,
     autoplay: true
   });
+  var mixer = mixitup(".gallery_inner", {
+    load: {
+      filter: ".category-living"
+    }
+  });
 });
