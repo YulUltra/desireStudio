@@ -1,4 +1,4 @@
-.works-path_item-title, .works-path_title, .decor_title, .collection_info-title, .new-collection_title, .top_slider-title, .rightside-menu_title, .footer_info-title, .menu_list-link {
+.blog-box_item-title, .blog-box_title, .works-path_item-title, .works-path_title, .decor_title, .collection_info-title, .new-collection_title, .top_slider-title, .rightside-menu_title, .footer_info-title, .menu_list-link {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
 }
@@ -382,6 +382,7 @@ body {
   width: 100%;
   box-shadow: -2px 3px 17px 0px #000;
   transition: all 0.5s;
+  z-index: 5;
 }
 .rightside-menu.rightside-menu--close {
   transform: translateX(500%);
@@ -698,4 +699,39 @@ body {
   width: 100%;
   height: 100%;
   max-height: 1150px;
+}
+
+.blog-box {
+  padding-bottom: 100px;
+}
+.blog-box_title {
+  color: #363838;
+  font-size: 36px;
+  line-height: 51px;
+  text-align: center;
+  margin: 0 auto 30px;
+  max-width: 430px;
+}
+.blog-box_items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+.blog-box_img-link {
+  margin-bottom: 19px;
+  display: inline-block;
+}
+.blog-box_links {
+  margin-bottom: 9px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #707070;
+}
+.blog-box_date, .blog-box_author, .blog-box_theme {
+  color: inherit;
+}
+.blog-box_item-title {
+  color: #363838;
+  font-size: 24px;
+  line-height: 38px;
 }
