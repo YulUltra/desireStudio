@@ -12,6 +12,13 @@ $(function () {
     autoplay: true,
   });
 
+  $(".contact-slider").slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 8,
+    slidesToScroll: 8,
+  });
+
   var mixer = mixitup(".gallery_inner", {
     load: {
       filter: ".category-living",
