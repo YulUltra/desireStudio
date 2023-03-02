@@ -333,7 +333,7 @@
 
 .new-collection {
   text-align: center;
-  padding: 45px 0 105px;
+  padding: 45px 0 35px;
   &_title {
     @extend %title-font;
     color: $title;
@@ -364,6 +364,7 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px;
+  padding-bottom: 70px;
   &_item {
     position: relative;
     &:hover {
@@ -727,5 +728,15 @@
     border-radius: 4px;
     background-color: $title;
     margin-top: -2px;
+  }
+}
+.partners {
+  padding: 16px 0 60px;
+  &_items {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &_item {
+    margin: 0 auto;
   }
 }
