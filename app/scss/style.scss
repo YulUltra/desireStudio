@@ -17,6 +17,9 @@
     padding: 0;
     cursor: pointer;
   }
+  &_btn-menu {
+    display: none;
+  }
 }
 
 .logo {
@@ -264,11 +267,15 @@
   z-index: 999;
   &_list {
     display: flex;
+    overflow-x: auto;
+  }
+  &_item {
+    position: relative;
+    padding-right: 8px;
   }
   &_item::after {
     content: " /";
-    margin-left: -4px;
-    margin-right: 4px;
+    position: absolute;
   }
 
   &_item:last-child::after {
@@ -1311,3 +1318,5 @@
     cursor: pointer;
   }
 }
+
+@import "media";
