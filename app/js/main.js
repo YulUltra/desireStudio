@@ -26,6 +26,43 @@ $(function () {
     arrows: false,
     slidesToShow: 8,
     slidesToScroll: 8,
+    responsive: [
+      {
+        breakpoint: 1511,
+        settings: {
+          slidesToShow: 6,
+          slidesToScroll: 6,
+        },
+      },
+      {
+        breakpoint: 1180,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 841,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+        },
+      },
+      {
+        breakpoint: 551,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
   });
 
   $(".article_slider-box").slick({

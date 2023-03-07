@@ -763,6 +763,10 @@
 .map {
   margin-top: -53px;
   margin-bottom: 50px;
+
+  iframe {
+    height: 578px;
+  }
 }
 
 .contact {
@@ -885,7 +889,7 @@
     top: 0;
     bottom: 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     aligh-items: center;
     background-color: rgba(#fff, 0.7);
     color: $title;
