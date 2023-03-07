@@ -10,6 +10,10 @@ $(function () {
     $(".menu").toggleClass("menu--open");
   });
 
+  if ($(window).width() < 651) {
+    $(".works-path_item--measurements").appendTo($(".works-path_items-box"));
+  }
+
   $(".top_slider").slick({
     dots: true,
     arrows: false,
